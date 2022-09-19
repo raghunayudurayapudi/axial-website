@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.wholemark.in/
+
+# Sitemaps
+Sitemap: https://www.wholemark.in/sitemap.xml
