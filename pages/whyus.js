@@ -16,8 +16,6 @@ import React from "react";
 import { useRouter } from "next/router";
 import SEO from "../components/SEO";
 
-import { HeroSection, WhyUsList } from "../components/WhyUs/components";
-
 export default function Whyus() {
   const router = useRouter();
 
@@ -30,8 +28,10 @@ export default function Whyus() {
         title="Why us"
         description="Why choose wholemark over other ecommerce fulfillment sevices | eCommerce fulfillment"
       />
-      <HeroSection />
-      <WhyUsList />
+
+      <div>
+        <h1>Why Us</h1>
+      </div>
     </div>
   );
 }
