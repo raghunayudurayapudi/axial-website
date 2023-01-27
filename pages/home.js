@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/router";
 import SEO from "../components/SEO";
+import HomeComponent from "components/Home/components";
 
 export default function Home() {
   const router = useRouter();
@@ -16,7 +17,7 @@ export default function Home() {
         description="eCommerce Fulfillment for D2C Brands | We provide stress-free integration with your current online sales channels and fulfill your orders with the highest accuracy and speed."
       />
 
-      <h1>Home Page</h1>
+      <HomeComponent />
     </div>
   );
 }

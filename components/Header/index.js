@@ -20,6 +20,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { UPLOADS_URL } from "utils/constants";
 
+// import { ReactComponent as AxialLogo } from '/assets/images/axial.svg';
+
 function HeaderLink(linkHref, linkText) {
   const router = useRouter();
 
@@ -58,12 +60,16 @@ export default function Header() {
           className={`flex flex-1 items-center justify-between py-0 md:items-stretch md:py-6`}
         >
           <Link href="/home" className="hover:cursor-pointer" passHref>
+            {/* <AxialLogo 
+             height={"32px"}
+              width={"172px"} />*/}
             <Image
               alt={"wholemark logo"}
-              height={"32px"}
-              width={"172px"}
-              src={`${UPLOADS_URL}/assets/wholemark-logo-white.svg`}
+              src={`/axial.svg`}
               priority
+              height={32}
+              width={172}
+              className="bg-primary"
             />
           </Link>
 
@@ -71,7 +77,7 @@ export default function Header() {
             {HeaderLink("/home", "Home")}
             {HeaderLink("/about", "About")}
             {HeaderLink("/whyus", "Why Us")}
-            {HeaderLink("/team", "Team")}
+            {HeaderLink("/team",   "Team")}
             {HeaderLink("/blogs", "Blog")}
             {HeaderLink("/support", "Contact")}
           </div>
