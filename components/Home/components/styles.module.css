@@ -2,6 +2,16 @@
     font-family: "Big Shoulders Display";
 }
 
+.heroBg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 43.54%, rgba(0,0,0,0.47) 100%);
+}
+
 .aboutHeader {
     font-family: "Big Shoulders Display";
     font-weight: 500;
