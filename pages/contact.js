@@ -1,0 +1,23 @@
+// Copyright 2021 akash
+
+import { useRouter } from "next/router";
+import SEO from "../components/SEO";
+import ContactComponent from "components/Contact";
+
+export default function Contact() {
+  const router = useRouter();
+
+  return (
+    <div>
+      <SEO
+        url={router.pathname}
+        openGraphType="website"
+        schemaType="Organization"
+        title="Contact"
+        description="eCommerce Fulfillment for D2C Brands | We provide stress-free integration with your current online sales channels and fulfill your orders with the highest accuracy and speed."
+      />
+
+      <ContactComponent />
+    </div>
+  );
+}

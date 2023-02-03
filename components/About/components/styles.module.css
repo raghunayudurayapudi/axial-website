@@ -1,3 +1,28 @@
 .bigShoulders {
     font-family: "Big Shoulders Display";
 }
+
+.quotedText::before {
+    content: "''";
+    position: absolute;
+    font-size: 112px;
+    font-weight: 700;
+    color: rgba(9, 68, 137, 0.3);
+    font-family: "Open Sans";
+    top: -80px;
+    left: 10px;
+    line-height: 34px;
+    transform: rotate(180deg);
+}
+.quotedText::after {
+    content: "''";
+    position: absolute;
+    font-size: 112px;
+    font-weight: 700;
+    color: rgba(9, 68, 137, 0.3);
+    font-family: "Open Sans";
+    bottom: -25px;
+    right: 0;
+    line-height: 34px;
+    transform: rotate(180deg);
+}

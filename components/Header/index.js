@@ -76,10 +76,9 @@ export default function Header() {
           <div className="items-center justify-center hidden md:ml-6 md:flex">
             {HeaderLink("/home", "Home")}
             {HeaderLink("/about", "About")}
-            {HeaderLink("/whyus", "Why Us")}
-            {HeaderLink("/team",   "Team")}
+            {HeaderLink("/services", "Services")}
             {HeaderLink("/blogs", "Blog")}
-            {HeaderLink("/support", "Contact")}
+            {HeaderLink("/contact", "Contact")}
           </div>
 
           <div className="block md:hidden">
@@ -108,10 +107,9 @@ export default function Header() {
           <div className="flex flex-col items-start justify-center">
             {HeaderLink("/home", "Home")}
             {HeaderLink("/about", "About")}
-            {HeaderLink("/whyus", "Why Us")}
-            {HeaderLink("/team", "Team")}
+            {HeaderLink("/services", "Services")}
             {HeaderLink("/blogs", "Blog")}
-            {HeaderLink("/support", "Contact")}
+            {HeaderLink("/contact", "Contact")}
           </div>
         </div>
       </div>
