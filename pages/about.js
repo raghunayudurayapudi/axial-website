@@ -15,6 +15,7 @@
 import { useRouter } from "next/router";
 import React from "react";
 import SEO from "../components/SEO";
+import AboutComponent from "components/About";
 
 export default function About() {
   const router = useRouter();
@@ -29,7 +30,7 @@ export default function About() {
         description="About WholeMark services and how the ecommerce fulfillment platform works | eCommerce fulfillment"
       />
 
-      <h1>About Page</h1>
+      <AboutComponent />
     </div>
   );
 }

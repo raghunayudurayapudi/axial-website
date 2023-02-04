@@ -1,0 +1,183 @@
+.bigShoulders {
+    font-family: "Big Shoulders Display";
+}
+
+.heroBg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 43.54%, rgba(0,0,0,0.47) 100%);
+}
+
+.aboutHeader {
+    font-family: "Big Shoulders Display";
+    font-weight: 500;
+    text-align: center;
+    font-size: 30px;
+    color: #84584D;
+    text-transform: uppercase;
+}   
+
+.aboutSubHeader {
+    font-size: 53px;
+    font-family: "Caudex";
+    font-weight: 700;
+    color: #032246;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.aboutFirst {
+    display: flex;
+    justify-content: center;
+    gap: 82px;
+    width: 100%;
+}
+
+.aboutFirst .textContent {
+    line-height: 42px;
+    line-height: normal;
+    color: #032246;
+    width: 100%;
+}
+
+.aboutFirst .imageContainer {
+    width: 100%;
+    height: 388px;
+    position: relative;
+}
+
+.aboutSecond {
+    margin-top: 100px;
+    display: grid;
+    justify-items: center;
+}
+
+.aboutSecond > div {
+    height: 414px;
+}
+
+.quotedText {
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;    
+    font-weight: 700;
+    color: #032246;
+    position: relative;
+    width: 254px;
+}
+.quotedText::before {
+    content: "''";
+    position: absolute;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(9, 68, 137, 0.3);
+    font-family: "Open Sans";
+    top: 40px;
+    left: 10px;
+    line-height: 34px;
+    transform: rotate(180deg);
+}
+.quotedText::after {
+    content: "''";
+    position: absolute;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(9, 68, 137, 0.3);
+    font-family: "Open Sans";
+    bottom: 80px;
+    right: 0;
+    line-height: 34px;
+    transform: rotate(180deg);
+}
+
+.aboutSecond > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.aboutSecond > div:nth-child(2) > .text,
+.aboutSecond > div:nth-child(1) > .subText{
+    font-size: 27px;
+    font-weight: 700;
+    font-family: "Big Shoulders Display";
+    color: #032246;
+}
+
+.aboutSecond > div:nth-child(2) > .image{
+    position: relative;
+    width: 85%;
+    height: 195px;
+}
+
+.aboutSecond .highlighted {
+    background-color: #f5ecea;
+    border: 2px solid #D7B0A8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: "Big Shoulders Display";
+    gap: 1rem;
+    font-weight: 700;
+}
+
+.highlighted .text {
+    font-size: 138px;
+    color: rgba(13, 54, 101, 0.29);
+}
+.highlighted .subtext {
+    font-size: 27px;
+    color: #032246;
+    letter-spacing: 0.225em;
+    text-align: center;
+}
+
+.checkmark {
+    position: relative;
+    height: max-content;
+}
+.checkmark::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 95%;
+    top: 10px;
+    left: 20px;
+    background-color: #D7B0A8;
+}
+
+@media screen and (max-width: 460px) {
+    .clientIcons {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .aboutFirst {
+        gap: 30px;
+    }
+    .aboutSecond {
+        margin-top: 50px;
+    }
+    .aboutSecond > div {
+        height: auto;
+        padding: 1.5rem 0;
+        min-height: 300px;
+    }
+
+    .quotedText::before{
+        top: -30px;
+    }
+    .quotedText::after {
+        bottom: 30px;
+    }
+}

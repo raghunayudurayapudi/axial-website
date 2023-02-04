@@ -1,4 +1,4 @@
-const siteUrl = "https://www.wholemark.in/";
+const siteUrl = "https://www.axialitsolutions.com/";
 
 module.exports = {
     siteUrl,

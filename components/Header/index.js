@@ -20,6 +20,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { UPLOADS_URL } from "utils/constants";
 
+// import { ReactComponent as AxialLogo } from '/assets/images/axial.svg';
+
 function HeaderLink(linkHref, linkText) {
   const router = useRouter();
 
@@ -52,34 +54,37 @@ export default function Header() {
   };
 
   return (
-    <nav className={`bg-primary`}>
+    <nav className={`bg-transparent relative z-20`}>
       <div className={`container py-4 xl:px-0`}>
         <div
           className={`flex flex-1 items-center justify-between py-0 md:items-stretch md:py-6`}
         >
           <Link href="/home" className="hover:cursor-pointer" passHref>
+            {/* <AxialLogo 
+             height={"32px"}
+              width={"172px"} />*/}
             <Image
               alt={"wholemark logo"}
-              height={"32px"}
-              width={"172px"}
-              src={`${UPLOADS_URL}/assets/wholemark-logo-white.svg`}
+              src={`/axial.svg`}
               priority
+              height={32}
+              width={172}
+              className="bg-primary"
             />
           </Link>
 
-          <div className="hidden items-center justify-center md:ml-6 md:flex">
+          <div className="items-center justify-center hidden md:ml-6 md:flex">
             {HeaderLink("/home", "Home")}
             {HeaderLink("/about", "About")}
-            {HeaderLink("/whyus", "Why Us")}
-            {HeaderLink("/team", "Team")}
+            {HeaderLink("/services", "Services")}
             {HeaderLink("/blogs", "Blog")}
-            {HeaderLink("/support", "Contact")}
+            {HeaderLink("/contact", "Contact")}
           </div>
 
           <div className="block md:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 text-white rounded-md hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
               onClick={toggleDrawer}
@@ -98,14 +103,13 @@ export default function Header() {
         } transition md:hidden`}
         id="mobile-menu"
       >
-        <div className="space-y-1 px-2 pt-2 pb-3">
+        <div className="px-2 pt-2 pb-3 space-y-1">
           <div className="flex flex-col items-start justify-center">
             {HeaderLink("/home", "Home")}
             {HeaderLink("/about", "About")}
-            {HeaderLink("/whyus", "Why Us")}
-            {HeaderLink("/team", "Team")}
+            {HeaderLink("/services", "Services")}
             {HeaderLink("/blogs", "Blog")}
-            {HeaderLink("/support", "Contact")}
+            {HeaderLink("/contact", "Contact")}
           </div>
         </div>
       </div>

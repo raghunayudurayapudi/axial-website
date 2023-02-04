@@ -1,5 +1,5 @@
 {
-  "name": "wholemark-facelift",
+  "name": "axial-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -38,7 +38,7 @@
     "sharp": "^0.30.7"
   },
   "devDependencies": {
-    "@svgr/webpack": "^6.2.1",
+    "@svgr/webpack": "^6.5.1",
     "autoprefixer": "^10.4.7",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
