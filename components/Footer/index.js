@@ -18,14 +18,32 @@ import Link from "next/link";
 import WaveDivider from "../Common/WaveDivider";
 import Image from "next/future/image";
 import { UPLOADS_URL } from "utils/constants";
-
+import css from './styles.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faInstagram,
   faLinkedin,
-  faTwitter,
-  faYoutube,
+  faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
+import { faPhone, faAt } from "@fortawesome/free-solid-svg-icons";
+
+const links = [
+  {
+    name: 'CALL',
+    icon: faPhone
+  },
+  {
+    name: 'EMAIL',
+    icon: faAt
+  },
+  {
+    name: 'LINKEDIN',
+    icon: faLinkedin
+  },
+  {
+    name: 'FACEBOOK',
+    icon: faFacebook
+  }
+]
 
 function linkText(linkText, linkPath, newTab = true) {
   return (
@@ -45,7 +63,7 @@ function linkIcon(linkIcon, linkPath, newTab = true) {
     <Link underline="none" href={linkPath} passHref>
       <a
         target={newTab ? "_blank" : "_self"}
-        className="hover:pointer mb-4 mr-4 inline-block pb-2 text-white transition hover:cursor-pointer hover:text-tulip-light"
+        className="inline-block pb-2 mb-4 mr-4 text-white transition hover:pointer hover:cursor-pointer hover:text-tulip-light"
       >
         {linkIcon}
       </a>
@@ -55,117 +73,35 @@ function linkIcon(linkIcon, linkPath, newTab = true) {
 
 export default function index() {
   return (
-    <div className="bg-primary text-white">
-      <div className="container">
-        <div className="flex flex-col items-start justify-between pt-12 md:flex-row">
-
-          <div className="flex flex-col">
-            <div className="mb-6">
-              <Image
-                alt={"wholemark logo"}
-                width="200px"
-                height="50%"
-                src={`${UPLOADS_URL}/assets/wholemark-logo-white.svg`}
-              />
-            </div>
-
-            {linkText(
-              "contactus@wholemark.in",
-              "mailto:contactus@wholemark.in"
-            )}
-            {linkText("+91 7893716883", "tel:+917893716883")}
-            {linkText("+91 9000046373", "tel:+919000046373")}
-            {/* {linkText("+1 9843770672", "tel:+19843770672")} */}
-
-            <div className="flex flex-row justify-start">
-              {linkIcon(
-                <FontAwesomeIcon icon={faTwitter} className="text-xl" />,
-                "https://twitter.com/whole_mark"
-              )}
-              {/* {linkIcon(<TwitterIcon />, "")} */}
-              {linkIcon(
-                <FontAwesomeIcon icon={faLinkedin} className="text-xl" />,
-                "https://www.linkedin.com/company/wholemark/"
-              )}
-              {linkIcon(
-                <FontAwesomeIcon icon={faYoutube} className="text-xl" />,
-                "https://www.youtube.com/channel/UCgeZ1gz8e1jbkcELNQeC8cg"
-              )}
-              {linkIcon(
-                <FontAwesomeIcon icon={faInstagram} className="text-xl" />,
-                "https://www.instagram.com/wholemark.in/"
-              )}
-            </div>
-          </div>
-
-          <div className="mt-6 sm:mt-0">
-            <div className="flex flex-col">
-              <p className="mb-4 font-bold"> {"US Address"} </p>
-              {linkText(
-                `Wholemark, Inc.
-              CORPORATION TRUST CENTER 1209 ORANGE ST
-              WILMINGTON, New Castle, DE`,
-                // "WholeMark, C9RG+WFM, Phase 2, HITEC City, Hyderabad, Telangana, India 500081",
-                "https://goo.gl/maps/hshdNhtwDjmSWLZu9"
-              )}
-
-              <p className="mt-6 mb-2 font-bold"> {"India Address"} </p>
-              {linkText(
-                "WholeMark, C9RG+WFM, Phase 2, HITEC City, Hyderabad, Telangana, India 500081",
-                "https://goo.gl/maps/hshdNhtwDjmSWLZu9"
-              )}
-            </div>
-          </div>
-
-          <div className="mt-6 sm:mt-0">
-            <div className="flex flex-col">
-              <p className="mb-4 font-bold"> {"About WholeMark"} </p>
-              {linkText("About us", "/about", false)}
-              {linkText("Team", "/team", false)}
-              {linkText("Blog", "/blogs", false)}
-              {linkText("Why us", "/whyus", false)}
-              {linkText("Privacy Policy", "/privacy", false)}
-            </div>
-          </div>
-
-          <div className="mt-6 sm:mt-0">
-            <div className="flex flex-col">
-              <p className="mb-4 font-bold"> {"Features"} </p>
-              {linkText("Warehouse Management", "/about#warehouse-management", false)}
-              {linkText("Order Management", "/about#order-management", false)}
-              {linkText("Inventory Management", "/about#inventory-management", false)}
-              {linkText("Order Fulfillment", "/about#order-fulfillment", false)}
-            </div>
-          </div>
-
-          <div className="mt-6 sm:mt-0">
-            <div className="flex flex-col">
-              <p className="mb-4 font-bold"> {"Learn"} </p>
-              {linkText("Careers", "https://angel.co/company/wholemark-1/jobs")}
-              {linkText("FAQs", "/faq", false)}
-              {linkText("Delivery Areas", "/home#delivering-to", false)}
-              {linkText("Support", "/support", false)}
-              {/* {linkText("Press", "/news")} */}
-            </div>
-          </div>
-        </div>
+    <div>
+      <div className={`text-[#E4C6BE] px-[20px] md:px-[35px] xl:px-[80px] pb-[50px] lg:pb-[100px] relative font-[700] after:absolute 
+      after:content-[''] after:top-0 after:left-0 after:w-full after:h-full ${css.background} bg-[url('/footerBg.png')] bg-cover bg-no-repeat  `}>
+        <div className="text-[22px] lg:text-[28px] pt-[60px] lg:pt-[100px] xl:pt-[120px] text-[#D7B0A8] font-[600] relative z-10 ">AXIAL IT SOLUTIONS</div>
+        <div className="text-[30px] lg:text-[48px] tracking-[2.5px] mt-[30px] lg:mt-[80px] relative z-10 ">Get consultancy</div>
+        <div className="text-[30px] lg:text-[48px] tracking-[2.5px] mt-[20px] lg:mt-[42px] relative z-10 ">contact@axial.com</div>
+        <div className="text-[30px] lg:text-[48px] tracking-[2.5px] mt-[20px] lg:mt-[42px] relative z-10 ">555 (33) 738 738</div>
       </div>
 
-      <div className="w-full bg-primary py-3 text-center">
-        <p className="text-sm">
-          Copyright WholeMark Inc. @ {new Date().getFullYear()}. All Rights
-          Reserved.
-        </p>
-        <img
-        height="1"
-        width="1"
-        style={{ display: "none" }}
-        alt=""
-        src="https://px.ads.linkedin.com/collect/?pid=4712657&fmt=gif"
-      />
-        {/* <p className="w-full py-1 text-center text-xs opacity-30">
-          Illustrations from StorySet
-        </p> */}
+      <div className="bg-[#161616] px-[20px] md:px-[35px] xl:px-[80px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          {links.map(link => (
+            <div key={link.name} className="text-[24px] text-[#E4C6BE] flex justify-center items-center font-[700] gap-[10px] border
+             border-[#CBAAA3] py-[18px] lg:py-[30px] cursor-pointer">
+              {link.name}
+              <FontAwesomeIcon icon={link.icon} />
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-[40px] lg:mt-[80px] flex flex-col-reverse lg:flex-row text-[16px] md:text-[18px] lg:text-[21px] text-[#EFC6BE] 
+        items-center md:justify-between font-[400] pb-[20px] gap-[20px_0px] ">
+          <div className="">© Copyright 2022 Sage IT. All rights reserved</div>
+          <div className="flex gap-[15px] md:gap-[20px] lg:gap-[50px]">
+            <div>Privacy Policy</div>
+            <div>Terms Of Usage</div>
+            <div>Cookies Policy</div>
+          </div>
+        </div>
       </div>
     </div>
   );
