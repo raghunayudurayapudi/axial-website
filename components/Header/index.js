@@ -65,7 +65,7 @@ export default function Header() {
               width={"172px"} />*/}
             <Image
               alt={"wholemark logo"}
-              src={`/axial.svg`}
+              src={`/ed.jpg`}
               priority
               height={32}
               width={172}
@@ -77,7 +77,6 @@ export default function Header() {
             {HeaderLink("/home", "Home")}
             {HeaderLink("/about", "About")}
             {HeaderLink("/services", "Services")}
-            {HeaderLink("/blogs", "Blog")}
             {HeaderLink("/contact", "Contact")}
           </div>
 
@@ -108,7 +107,6 @@ export default function Header() {
             {HeaderLink("/home", "Home")}
             {HeaderLink("/about", "About")}
             {HeaderLink("/services", "Services")}
-            {HeaderLink("/blogs", "Blog")}
             {HeaderLink("/contact", "Contact")}
           </div>
         </div>

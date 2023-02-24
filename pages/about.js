@@ -27,7 +27,7 @@ export default function About() {
         openGraphType="website"
         schemaType="Organization"
         title="About"
-        description="About WholeMark services and how the ecommerce fulfillment platform works | eCommerce fulfillment"
+        description="Know more about our organization"
       />
 
       <AboutComponent />

@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import ChevronRight from '../../../assets/chevron_right.svg'
+import Checkmark from '../../../assets/checkmark.svg'
 
 const services = [
     {
@@ -39,6 +41,22 @@ const outcomes = [
     name: 'Cloud Management',
     description: 'Multi-cloud capable container platform with an emphasis on ease of Day2 operations, security, and governance. Provides the ability to manage'
   }
+]
+
+const features = [
+  "Management Advice Service",
+  "Strategy Advice Service",
+  "Operations Advice Service",
+  "Financial Advice Service",
+  "HR Advice Service"
+]
+
+const advantages = [
+  "Reliable and Objective Advice",
+  "Higher Profits",
+  "Streamlined Operations",
+  "Expand the Business",
+  "Leader in the market"
 ]
 
 const Advisory = () => {
@@ -83,12 +101,42 @@ const Advisory = () => {
           ))}
          </div>
 
-        <div className='flex flex-col lg:flex-row mt-[50px] lg:mt-[100px] px-[28px] lg:px-[100px] gap-[50px_120px] '>
+        <div className='lg:hidden  text-[40px] lg:text-[50px] font-[700] text-center mt-[80px]'>Features</div>
+        <div className='flex flex-col-reverse lg:flex-row mt-[50px] lg:mt-[100px] px-[16px] lg:px-[100px] gap-[50px_120px] '>
           <div className='flex-1 text-[#032246]'>
-            <div className='text-[40px] lg:text-[50px] font-[700]'>Features</div>
+            <div className='hidden lg:block text-[40px] lg:text-[50px] font-[700]'>Features</div>
+            <div className='flex flex-col gap-[20px] w-max m-auto lg:ml-0 lg:mr-0 mt-[30px] '>
+              {features.map((feature) => (
+                <div key={feature} className='flex gap-[27px] items-center '>
+                  <div><ChevronRight /></div>
+                  <div className='text-[21px] text-[#032246] font-[600] lg:text-[26px]'>{feature}</div>
+                </div>
+              ))}
+            </div>
+
           </div>
           <div className='lg:flex-1 h-[357px] relative'>
             <Image src="/serviceDetails2.png" alt="" layout='fill' objectFit='cover' />
+          </div>
+        </div>
+
+        <div className='mt-[100px] bg-[#F5ECEA] px-[20px] lg:px-[60px] xl:px-[100px] pb-[100px]  '>
+          <div className='pt-[50px] text-center lg:text-left text-[44px] text-[#84584D] font-[700]  '>Advantages</div>
+          <div className='flex flex-col lg:flex-row mt-[50px] gap-[40px_20px] items-center'>
+            <div className='relative lg:flex-1 h-[216px] sm:h-[432px]'>
+              <Image src="/serviceDetails3.png" alt="Advantages" layout='fill' objectFit='cover' />
+            </div>
+
+            <div className='flex-1'>
+              <div className='flex flex-col gap-[35px] w-max m-auto'>
+                {advantages.map((adv) => (
+                  <div key={adv} className='flex gap-[24px]'>
+                    <div><Checkmark /></div>
+                    <div className='text-[#84584D] text-[22px] lg:text-[29px] font-[600] ' >{adv}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
     </>

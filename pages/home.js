@@ -14,7 +14,7 @@ export default function Home() {
         openGraphType="website"
         schemaType="Organization"
         title="Home"
-        description="eCommerce Fulfillment for D2C Brands | We provide stress-free integration with your current online sales channels and fulfill your orders with the highest accuracy and speed."
+        description="We are Techonolgy company focused on delivery quality technology products and services."
       />
 
       <HomeComponent />

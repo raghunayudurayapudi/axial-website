@@ -13,12 +13,6 @@
 // limitations under the License.
 
 import React from "react";
-import Head from "next/head";
-
-import { FAQ, Questions } from "../components/FAQ";
-
-import WavesDivider from "../components/Common/WavesDivider";
-import WaveDivider from "../components/Common/WaveDivider";
 import SEO from "../components/SEO";
 import { useRouter } from "next/router";
 
@@ -32,7 +26,7 @@ export default function Faq() {
         openGraphType="website"
         schemaType="Organization"
         title="FAQ"
-        description="Frequently asked questions (FAQ) page | eCommerce fulfillment"
+        description="FAQ"
       />
 
       <div>

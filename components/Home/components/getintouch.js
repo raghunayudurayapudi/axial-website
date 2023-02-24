@@ -39,7 +39,7 @@ const GetInTouch = () => {
         </form>
 
         <div className='hidden md:flex md:flex-1 justify-center border-l border-[#D7B0A8]'>
-          <div className={`mt-[60px] lg:mt-[135px] ${css.checkmark}`}>
+          <div className={`mt-[60px] lg:mt-[135px] ${css.checkmark} mb-[30px] lg:mb-0`}>
             {infoTexts.map((text) => (
               <div key={text} className="flex items-center gap-[25px] mt-[92px] first-of-type:mt-0">
                 <div className='relative z-10'><Checkmark /></div>

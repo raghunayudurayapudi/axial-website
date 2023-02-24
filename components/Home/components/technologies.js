@@ -33,18 +33,19 @@ const content = [
 
 const Technologies = () => {
   return (
-    <section id="technologies" className='border-b-2 border-b-[#D7B0A8]' >
+    <section id="technologies" >
         <div className={`${css.aboutHeader} mt-[160px]`}>02 Technologies</div>
         <div className={css.aboutSubHeader}>Areas Of Expertise</div>
 
         <div className='mt-[73px]'>
             {content.map((value, index) => (
-                <div key={value.header} className={`border-t-2 border-t-[#D7B0A8] px-[17px] 
+                <div key={value.header} className={`border-2 border-[#D7B0A8] px-[17px] mx-[17px] xl:mx-[80px]
                 bg-[#F5ECEA] py-[35px] md:grid md:grid-cols-3 md:items-center lg:px-[60px] lg:gap-4 xl:px-[130px]
-                ${index !== 1 ? "md:bg-white":""}  `}>
+                ${index %2 !== 1 ? "md:bg-white":""} ${index === 0 ? "rounded-tl-md rounded-tr-md": ""} 
+                ${index === 4 ? "rounded-bl-md rounded-br-md" : ""} ${index !== 0 ? "border-t-0" : ""} `}>
                     <div className={`text-[36px] text-[#032246] font-[700] ${css.bigShoulders}`}>{value.header}</div>
-                    <div className={`mt-[25px] text-[18px] text-[#032246] max-w-[328px] md:max-w-[375px] ${index === 1 ? "md:text-[#84584D]": ""}`}>{value.content}</div>
-                    <div className={`flex items-center gap-[13px] ${css.bigShoulders} mt-[30px] text-[#84584D] md:hidden`}>READ MORE <ReadMoreIcon /></div>
+                    <div className={`mt-[25px] text-[18px] text-[#032246] max-w-[328px] md:max-w-[375px] ${index % 2 === 1 ? "md:text-[#84584D]": ""}`}>{value.content}</div>
+                    <div className={`flex items-center gap-[13px] ${css.bigShoulders} mt-[30px] text-[#141211] md:hidden`}>READ MORE <ReadMoreIcon /></div>
                     <div className='h-[225px] w-[100%] mt-[20px] relative'>
                         <Image alt={value.header} src={value.img} layout="fill" objectFit='cover' />
                     </div>

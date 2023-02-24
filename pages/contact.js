@@ -14,7 +14,7 @@ export default function Contact() {
         openGraphType="website"
         schemaType="Organization"
         title="Contact"
-        description="eCommerce Fulfillment for D2C Brands | We provide stress-free integration with your current online sales channels and fulfill your orders with the highest accuracy and speed."
+        description="Contact Us for any additional information."
       />
 
       <ContactComponent />
